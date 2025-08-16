@@ -52,18 +52,23 @@ public class Houses {
 		
 	
 		rob.setWindowSize(1200, 600);
-		rob.setSpeed(15);
+		rob.setSpeed(35);
 		rob.setPenWidth(5);
-		rob.moveTo(40, 450);
+		rob.moveTo(0, 450);
 		rob.penDown();
+		rob.setPenColor(Color.green.darker().darker());
+		rob.turn(90);
+		rob.move(40);
+		rob.turn(-90);
 		Random gen = new Random();
-		for(int i = 1; i<11; i++) {
+		for(int i = 1; i<22; i++) {
 			drawhouse("house #" + i + " being drawn now", gen.nextInt(250 - 60 + 1) + 60);
 		}
 	}
 	void drawhouse(String messageToPrintToConsole, int height) {
 		System.out.println(messageToPrintToConsole);
 		rob.setRandomPenColor();
+		
 		rob.move(height);
 		rob.turn(90);
 		rob.move(30);
