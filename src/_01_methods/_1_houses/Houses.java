@@ -1,5 +1,8 @@
 package _01_methods._1_houses;
 
+import java.awt.Color;
+import java.util.Random;
+
 import javax.annotation.processing.RoundEnvironment;
 
 import org.jointheleague.graphical.robot.Robot;
@@ -9,7 +12,7 @@ import org.jointheleague.graphical.robot.Robot;
  *    Level 1
  */
 public class Houses {
-		
+	Robot rob = new Robot("mini");	
 	public void run() {
 		// Check the recipe to find out what code to put here
 		//house code
@@ -41,10 +44,34 @@ public class Houses {
 */
 //9. Make large houses have flat roofs
 
-		Robot rob = new Robot();
-		rob.setWindowSize(700, 700);
-		rob.moveTo(30, 540);
+		
+		// FORMULA for RANDOM NUMBERS between HIGH and LOW
+		// Random ran = new Random();
+		// int n = ran.nextInt(HIGH - LOW + 1) + LOW;
+		
+		
+	
+		rob.setWindowSize(1200, 600);
+		rob.setSpeed(15);
+		rob.setPenWidth(5);
+		rob.moveTo(40, 450);
 		rob.penDown();
-		rob.move(100);
+		Random gen = new Random();
+		for(int i = 1; i<11; i++) {
+			drawhouse("house #" + i + " being drawn now", gen.nextInt(250 - 60 + 1) + 60);
+		}
+	}
+	void drawhouse(String messageToPrintToConsole, int height) {
+		System.out.println(messageToPrintToConsole);
+		rob.setRandomPenColor();
+		rob.move(height);
+		rob.turn(90);
+		rob.move(30);
+		rob.turn(90);
+		rob.move(height);
+		rob.setPenColor(Color.green.darker().darker());
+		rob.turn(-90);
+		rob.move(25);
+		rob.turn(-90);
 	}
 }
