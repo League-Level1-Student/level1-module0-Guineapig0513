@@ -4,6 +4,7 @@ import java.awt.Color;
 import java.util.Random;
 
 import javax.annotation.processing.RoundEnvironment;
+import javax.swing.JOptionPane;
 
 import org.jointheleague.graphical.robot.Robot;
 
@@ -61,22 +62,41 @@ public class Houses {
 		rob.move(40);
 		rob.turn(-90);
 		Random gen = new Random();
-		for(int i = 1; i<22; i++) {
+		for(int i = 1; i<21; i++) {
 			drawhouse("house #" + i + " being drawn now", gen.nextInt(250 - 60 + 1) + 60);
+			
 		}
+		JOptionPane.showMessageDialog(null, "Yay rob has built a city everyone say thank you to rob!!");
 	}
 	void drawhouse(String messageToPrintToConsole, int height) {
 		System.out.println(messageToPrintToConsole);
 		rob.setRandomPenColor();
 		
 		rob.move(height);
-		rob.turn(90);
-		rob.move(30);
-		rob.turn(90);
+		if(height >= 150) {
+		drawFlatRoof();
+		} 
+		else {
+			drawHouseRoof();
+		}
 		rob.move(height);
 		rob.setPenColor(Color.green.darker().darker());
 		rob.turn(-90);
 		rob.move(25);
 		rob.turn(-90);
+		
+	}
+	private void drawHouseRoof() {
+	 rob.turn(45);
+	 rob.move(25);
+	 rob.turn(90);
+	 rob.move(25);
+	 rob.turn(45);
+		
+	}
+	private void drawFlatRoof() {
+		rob.turn(90);
+		rob.move(30);
+		rob.turn(90);
 	}
 }

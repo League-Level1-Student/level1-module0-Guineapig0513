@@ -38,6 +38,7 @@ import processing.core.PImage;
 public class SpinningRecord extends PApplet {
     static final int WIDTH = 600;
     static final int HEIGHT = 600;
+    int recordSpin = 0;
     
     Song song = new Song("awesomeTrack.mp3");
     PImage pictureOfRecord;
@@ -49,7 +50,8 @@ public class SpinningRecord extends PApplet {
 
     @Override
     public void setup() {
-        
+    	 pictureOfRecord = loadImage("images/record.png");
+    	
     }
 
     @Override
