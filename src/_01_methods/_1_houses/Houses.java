@@ -53,13 +53,13 @@ public class Houses {
 		
 	
 		rob.setWindowSize(1200, 600);
-		rob.setSpeed(35);
+		rob.setSpeed(75);
 		rob.setPenWidth(5);
 		rob.moveTo(0, 450);
 		rob.penDown();
 		rob.setPenColor(Color.green.darker().darker());
 		rob.turn(90);
-		rob.move(40);
+		rob.move(55);
 		rob.turn(-90);
 		Random gen = new Random();
 		for(int i = 1; i<21; i++) {
