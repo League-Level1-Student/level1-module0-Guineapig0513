@@ -51,6 +51,7 @@ public class SpinningRecord extends PApplet {
     public void setup() {
     	 pictureOfRecord = loadImage("images/veggie.png");
     	 pictureOfRecord.resize(600, 600);
+    	 
     	
     }
 
@@ -59,7 +60,7 @@ public class SpinningRecord extends PApplet {
         rotateImage(pictureOfRecord, recordSpin);
     	image(pictureOfRecord, 0, 0);
         if(mousePressed) {
-        	recordSpin+=361;
+        	recordSpin+=100;
         	song.play();
         }
     }
