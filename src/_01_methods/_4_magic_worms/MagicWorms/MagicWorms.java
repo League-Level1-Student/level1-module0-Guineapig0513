@@ -63,7 +63,7 @@ public class MagicWorms extends PApplet {
     float noiseInterval = PI;
 
     void makeMagical() {
-        fill(0, 0, 0, 10);
+        fill(0, 0, 0, 2);
         rect(0, 0, width, height);
         noStroke();
     }

@@ -46,7 +46,7 @@ public class RainGame extends PApplet {
     static final int HEIGHT = 600;
 
     int score = 0;
-    int bucketWidth = 50;
+    int bucketWidth = 75;
     int bucketHeight;
     PImage veggieback;
     PImage bucket;
