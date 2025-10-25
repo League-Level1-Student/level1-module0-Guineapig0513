@@ -8,8 +8,6 @@ public class FlappyBird extends PApplet {
     static final int HEIGHT = 600;
     int bigX = 150;
     int bigY = 300;
-    int BPipeX = 790;
-    int TPipeX = 790;
     float birdYVelocity = -10;
     float gravity = (float) 0.25;
     PImage back;
@@ -27,22 +25,19 @@ public class FlappyBird extends PApplet {
          pipeBottom = loadImage("bottomPipe.png");
          pipeTop = loadImage("topPipe.png");
          borb = loadImage("big.png");
-         borb.resize(750,2);
-        
+         borb.resize(75,50);
     }
 
     public void draw() {
     	background(back);
-        image (pipeBottom,BPipeX,375);
-        image (pipeTop,TPipeX,-130);
+        image (pipeBottom,250,375);
+        image (pipeTop,250,-130);
         image (borb, bigX, bigY);
         birdYVelocity += gravity;
         bigY += birdYVelocity;
-        BPipeX -= 2;
-        TPipeX -=2;
     }
     public void mouseClicked() {
-    	birdYVelocity = -4; 
+    	bigY -= 1000;
     }
     
 
