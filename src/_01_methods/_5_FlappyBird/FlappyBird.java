@@ -27,6 +27,7 @@ public class FlappyBird extends PApplet {
     public void settings() {
         size(WIDTH, HEIGHT);
     }
+    
 
     public void setup() {
     	 back = loadImage("veggieground.jpg");
