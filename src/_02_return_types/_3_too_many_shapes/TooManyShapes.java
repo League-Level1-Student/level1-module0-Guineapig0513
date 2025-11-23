@@ -16,16 +16,23 @@ public class TooManyShapes {
 		String i = JOptionPane.showInputDialog("How many sides do you want your shape to have?");
 		//2. Ask the user how many shapes they want
 		String e = JOptionPane.showInputDialog("How many shapes do you want?");
+		int es = Integer.parseInt(e);
 		//3. Call canMakeShape() and save what is returned into a variable
-		boolean make = canMakeShape(i);
+		int is = Integer.parseInt(i);
+		boolean make = canMakeShape(is);
 		//4. If the shape CAN be drawn
-		
+		if(make) {
+			int s = calculateTurnAngle(is);
+			drawPolygons(es, is, s);
+		}
 			//5. Call and save what is returned from calculateTurnAngle()
 		
 			//6. Use drawPolygons() to draw your shape
 		
 		//7. If the shape CANNOT be drawn 
-			
+		else {
+			System.out.println(notEnoughSides());
+		}
 			//8. Call notEnoughSides() and print out what is returned 
 		
 	}
@@ -67,7 +74,7 @@ public class TooManyShapes {
 	}
 	
 	static String notEnoughSides() {
-		return "I'm sorry we cannot make a shape with that many sides\n"
-				+ "Please enter a number greater than 2";
+		return "SINCE WHEN WAS THERE A SHAPE WITH 2 SIDES OR LESS SIDES???\n"
+				+ "What are you on about atp say a # greater then 2 you hammerhead";
 	}
 }
