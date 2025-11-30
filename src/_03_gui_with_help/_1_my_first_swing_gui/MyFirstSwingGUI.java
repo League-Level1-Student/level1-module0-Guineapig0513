@@ -31,11 +31,11 @@ public class MyFirstSwingGUI {
 		// 7. Set the text of the JLabel to a lovely greeting.
 		
 		// 8. Add the JPanel object to the JFrame
-		
+		e.add(i);
 		// 9. Add the JLabel object to the JPanel
-		
-		// 10. Pack your JFrame.
-		
+		i.add(u);
+		// 10. Pack your JFrame
+		e.pack();
 		// 11. Run your program again. Do you see your message.
 		
 		// 12. Use the loadImage method to set the icon of the JLabel object.
