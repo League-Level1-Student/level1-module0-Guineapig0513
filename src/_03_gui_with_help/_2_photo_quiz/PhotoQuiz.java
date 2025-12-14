@@ -51,7 +51,7 @@ public class PhotoQuiz {
 		quizWindow.remove(e);
 		// 10. find another image and create it (might take more than one line
 		// of code)
-		String hah = "https://cdn-useast1.kapwing.com/static/templates/get-stick-bugged-lol-meme-template-full-4aeb0e95.webp";
+		String hah = "https://i.ytimg.com/vi/6r5eGfbbLgk/sddefault.jpg";
 		Component erm;
 		erm = createImage(hah);
 		// 11. add the second image to the quiz window
@@ -66,6 +66,22 @@ public class PhotoQuiz {
 		}
 		else {
 			System.out.println("how did you get that wrong your INCORRECT... get stickbugged lol");
+		}
+		quizWindow.remove(erm);
+		String eek = "https://cdn-images.dzcdn.net/images/artist/08254d58503abd8bcdb0e587bb29b300/1900x1900-000000-81-0-0.jpg";
+		Component cough;
+		cough = createImage(eek);
+		quizWindow.add(cough);
+		quizWindow.pack();
+		
+		
+		
+		String kitty = JOptionPane.showInputDialog("who is this cutesy kitty");
+		if(kitty.equalsIgnoreCase("nyan cat")) {
+			System.out.println("nyan cat is very cutesy and correct :3");
+		}
+		else {
+			System.out.println("how. HOW.");
 		}
 	}
 
