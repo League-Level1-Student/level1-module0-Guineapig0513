@@ -21,10 +21,10 @@ public class BodyPartQuiz {
 	// package,or if you prefer, get celebrity photos from the Internet,
 	// place them in the recipe package(body_part_quiz), and change the names below.
 
-	String firstImage = "src/_05_body_part_quiz/arnold.jpeg";
-	String secondImage = "src/_05_body_part_quiz/leonardo.jpeg";
-	String thirdImage = "src/_05_body_part_quiz/morgan.jpeg";
-	String fourthImage = "src/_05_body_part_quiz/jack.jpeg";
+	String firstImage = "src/_03_gui_with_help/_4_body_part_quiz/arnold.jpeg";
+	String secondImage = "src/_03_gui_with_help/_4_body_part_quiz/leonardo.jpeg";
+	String thirdImage = "src/_03_gui_with_help/_4_body_part_quiz/morgan.jpeg";
+	String fourthImage = "src/_03_gui_with_help/_4_body_part_quiz/jack.jpeg";
 
 	JFrame window = new JFrame();
 	JPanel panel = new JPanel();
@@ -42,7 +42,7 @@ public class BodyPartQuiz {
 
 		// 3. Change the size of the window so that you can only see part of the
 		// image.
-		window.setSize(500, 500);
+		window.setSize(225, 225);
 
 		showNextImage();
 
@@ -59,17 +59,77 @@ public class BodyPartQuiz {
 
 		// 5. Check their answer. If they guessed correctly:
 		// -- Tell them they are right and increase the score by 1
-
+		if(guess.equalsIgnoreCase("Arnold")) {
+			JOptionPane.showMessageDialog(null, "good job ^^!");
+			score +=1;
+		}
 		// 6. Otherwise:
 		// -- Tell them they are wrong and who the person is
-
+		else {
+			score -= 1;
+			JOptionPane.showMessageDialog(null, "you got it wrong :[");
+		}
+		JOptionPane.showMessageDialog(null, "your new score is "+score+"!");
 		// 7. Use the showNextImage() method below to get the next image
 		showNextImage();
 
 		// 8. .... repeat 4-7 for all your images.....
-
+		String guess2 = JOptionPane.showInputDialog("Now, who is this?");
 		// 9. Show them their current score
-
+		if(guess2.equalsIgnoreCase("leonardo")) {
+			score +=1;
+			JOptionPane.showMessageDialog(null, "good, great ^w^!");
+		}
+		else {
+			score -=1;
+			JOptionPane.showMessageDialog(null, "wrong :[ (twin idk who this guy is also TwT)");
+		}
+		JOptionPane.showMessageDialog(null, "your new score is "+score+"!");
+		showNextImage();
+		String guess3 = JOptionPane.showInputDialog("whooo is this?");
+		if(guess3.equalsIgnoreCase("morgan")) {
+			score += 1;
+			JOptionPane.showMessageDialog(null, "amazing! seriously!! :^P");
+		}
+		else {
+			score -= 1;
+			JOptionPane.showMessageDialog(null, "who even is this, anyways boohoo D:");
+		}
+		showNextImage();
+		String guess4 = JOptionPane.showInputDialog("finally, who is this?");
+		if(guess4.equalsIgnoreCase("jack")) {
+			score +=1;
+			JOptionPane.showMessageDialog(null, "you finished strong and correctly good job!!! C:");
+		}
+		else {
+			score -=1;
+			JOptionPane.showMessageDialog(null, "WHO IS THIS AUHFWUIE anyways u got it wrong :'/");
+		}
+		JOptionPane.showMessageDialog(null, "Loading results..");
+		JOptionPane.showMessageDialog(null, "Loading results...");
+		JOptionPane.showMessageDialog(null, "Loading results..");
+		JOptionPane.showMessageDialog(null, "Complete!!!");
+		if(score ==4) {
+		JOptionPane.showMessageDialog(null, "You got a 100!! congrats you really know people! (or are chronically online) NO INBETWEENS");
+		}
+		else if(score == 3) {
+			JOptionPane.showMessageDialog(null, "you got a 75%! you got one wrong but everyone makes mistakes :] (plus idk who these people are)");
+		}
+		else if(score == -1) {
+			JOptionPane.showMessageDialog(null, "bro. getting smt to -25% - -100% really?");
+		}
+		else if(score == -2) {
+			JOptionPane.showMessageDialog(null, "bro. getting smt to -25% - -100% really?");
+		}
+		else if(score == -3) {
+			JOptionPane.showMessageDialog(null, "bro. getting smt to -25% - -100% really?");
+		}
+		else if(score == -4) {
+			JOptionPane.showMessageDialog(null, "bro. getting smt to -25% - -100% really?");
+		}
+		else {
+			JOptionPane.showMessageDialog(null, "RETAKE THE QUIZ YOU GOT A 0%-50% FAILURE /jk jk");
+		}
 	}
 
 	public void showNextImage() {
