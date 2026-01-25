@@ -33,7 +33,7 @@ public class FortuneCookie implements ActionListener {
 			JOptionPane.showMessageDialog(null, "you will lose all your money gambling");
 		}
 		else if(rand == 3) {
-			JOptionPane.showMessageDialog(null, "You fail art school and MIGHT like german sheperds... im not elaborting");
+			JOptionPane.showMessageDialog(null, "You fail art school... im not elaborting");
 		}
 		else {
 			JOptionPane.showMessageDialog(null, "you have 0 survival instincts and run into the woods and become prey for a bear");
