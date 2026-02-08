@@ -64,7 +64,7 @@ public class JackInTheBox implements ActionListener {
 	public void actionPerformed(ActionEvent arg0) {
 		i += 1;
 		if(i == 5) {
-		System.out.println("you clicked the button "+i+" times");
+		System.out.println("u fool! you clicked the button "+i+" times");
 		showPicture("jackInTheBox.png");
 		playSound("homer-woohoo.wav");
 		JOptionPane.showMessageDialog(null, "haha");
