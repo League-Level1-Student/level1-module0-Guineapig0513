@@ -9,7 +9,7 @@ import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 
 public class FortuneCookie implements ActionListener {
-	JFrame frame = new JFrame();
+	JFrame frame = new JFrame("supa mysterious button :O???");
 	public void showButton() {
 		System.out.println("Button clicked");
 		frame.setVisible(true);
