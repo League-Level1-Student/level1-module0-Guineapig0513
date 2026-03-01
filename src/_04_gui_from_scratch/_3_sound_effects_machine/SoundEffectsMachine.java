@@ -52,7 +52,7 @@ public class SoundEffectsMachine implements ActionListener {
 			fr4me.setVisible(true);
 			yes.addActionListener(this);
 			no.addActionListener(this);
-			JOptionPane.showMessageDialog(null, "NEW CONTACT CALLED 'Spamton G Spamton' SENT A VOICEMAIL, ACCEPT?");
+			JOptionPane.showMessageDialog(null, "NEW CONTACT CALLED 'Spamton G Spamton' SENT A VOICEMAIL REQUESTING YOU TO DOWNLOAD A FILE, ACCEPT?");
 		}
 		if(yes == e.getSource()) {
 			playSound("spam.wav");
