@@ -26,6 +26,7 @@ public class CutenessTV implements ActionListener {
 				duck.addActionListener(this);
 				ferg.addActionListener(this);
 				potato.addActionListener(this);
+				frame.setVisible(true);
 				
 	}
 	void showDucks() {
@@ -59,7 +60,16 @@ public class CutenessTV implements ActionListener {
 	}
 	@Override
 	public void actionPerformed(ActionEvent e) {
-		// TODO Auto-generated method stub
+		if(duck == e.getSource()) {
+			showDucks();
+		}
+		else if (ferg == e.getSource()) {
+			showFrog();
+		}
+		else {
+			showPotato();
+			//I LOVE GUINEA PIGS SO MUCH. I. LOVE. GUINEA. PIGS!1!!!!1!11!
+		}
 		
 	}
 
